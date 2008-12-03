@@ -5,15 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{317F7BB3-A802-4245-9E88-BEAE410DA9F9}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{C98A0231-6314-48A7-AEAD-B4704809F88B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHTMLBuilder</RootNamespace>
-    <AssemblyName>MHTMLBuilder</AssemblyName>
+    <RootNamespace>TestConsoleApplication</RootNamespace>
+    <AssemblyName>TestConsoleApplication</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkSubset>
-    </TargetFrameworkSubset>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,27 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.81.0.1407, Culture=neutral, PublicKeyToken=1b03e6acf1164f73" />
     <Reference Include="System" />
-    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder.cs" />
-    <Compile Include="ExternalFile.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebClientEx.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="plugins\ICSharpCode.SharpZipLib.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomExceptionEnumerators\CustomExceptionEnumerators.csproj">
-      <Project>{A26B05BD-F04E-4E53-B503-5773A0C3528E}</Project>
-      <Name>CustomExceptionEnumerators</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CustomException\CustomException.csproj">
       <Project>{A271AC08-BC86-4082-8778-CC7D87E82384}</Project>
       <Name>CustomException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\url2mhtml\MHTMLBuilder.csproj">
+      <Project>{317F7BB3-A802-4245-9E88-BEAE410DA9F9}</Project>
+      <Name>MHTMLBuilder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
